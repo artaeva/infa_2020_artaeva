@@ -10,6 +10,7 @@ polygon(screen, (0, 255, 255), [(0,0), (500, 0), (500, 370), (0, 370)], 0)
 polygon(screen, (220, 220, 220), [(0, 370), (500, 370), (500, 700), (0, 700)], 0)
 line(screen, (0, 0, 0), (0, 370), (500, 370), 1)
 
+#напишем функцию, которая будет возвращать поверхность с нарисованным на ней медведем и прорубью и рыбами
 def bear():
     scrprorub = pygame.Surface((300, 600))
     ellipse(scrprorub, (75, 75, 75), (0, 0, 200, 80), 0)
@@ -39,7 +40,7 @@ def bear():
     line(scrbear, (0, 0, 0), (450, 120), (450, 450), 2)
     ellipse(scrbear, (220, 220, 220), (255, 300, 66, 33), 0)
     ellipse(scrbear, (0, 0, 0), (255, 300, 66, 33), 1)
-
+#напишем поверхность для рыбы
     scrfish = pygame.Surface((400, 400))
     polygon(scrfish, (255, 0, 0), [[260, 330], [240, 350], [280, 350]])
     polygon(scrfish, (0, 0, 0), [[260, 330], [240, 350], [280, 350]],1)
@@ -53,7 +54,7 @@ def bear():
     ellipse(scrfish, (0, 0, 0), (230, 338, 60, 20), 1)
     ellipse(scrfish, (0, 0, 0), (276, 343, 10, 10))
     ellipse(scrfish, (255, 255, 255), (280, 345, 5, 5))
-
+#на поверхность с медведем вставим семь рыб
     scrfish = pygame.transform.rotate(scrfish, 15)
     scrbear.blit(scrfish, (100, 160))
     scrfish = pygame.transform.rotate(scrfish, -5)
@@ -74,6 +75,7 @@ def bear():
     scrbear.blit(scrfish, (310, 230))
     return scrbear
 
+#вставим четырех медведей
 scr1 = pygame.transform.scale(bear(), (250, 250))
 screen.blit(scr1, (0, 430))
 scr3 = pygame.transform.scale(bear(), (250, 250))
@@ -85,6 +87,7 @@ screen.blit(scr2, (0, 400))
 scr3 = pygame.transform.scale(scr3, (200, 200))
 screen.blit(scr3, (300, 300))
 
+#нарисуем поверхность с крестиком
 scr4 = pygame.Surface((900, 900))
 circle(scr4, (210, 240, 215), (250, 250), 150, 30)
 line(scr4, (210, 240, 215), (100, 240), (400, 260), 25)
