@@ -1,0 +1,7 @@
+aaa 12
+bbb 9
+aaaa 7
+ddd 14
+aaa 12
+bbb 9
+aaaa 7
