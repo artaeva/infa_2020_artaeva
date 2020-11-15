@@ -1,7 +1,7 @@
+fff 14
+aaaaa 13
 aaa 12
-bbb 9
-aaaa 7
-ddd 14
-aaa 12
-bbb 9
-aaaa 7
+ssss 5
+bbb 3
+ttt 2
+ddd 0
